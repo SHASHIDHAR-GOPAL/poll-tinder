@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'poll_card_widget.dart';
+import 'actions_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -61,7 +62,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          children: <Widget>[PollCardWidget()],
+          children: <Widget>[
+            Flexible(
+              child: PollCardWidget(),
+              flex: 1,
+            ),
+            Flexible(
+              child: Column(
+                children: <Widget>[
+                  Actions(),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
