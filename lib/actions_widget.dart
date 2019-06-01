@@ -21,13 +21,13 @@ class _ActionState extends State<Actions> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           IconButton(
+              icon: Icon(Icons.cancel, color: Colors.red), onPressed: () {}),
+          IconButton(
               icon: Icon(
                 !like ? Icons.favorite_border : Icons.favorite,
                 color: Colors.red,
               ),
               onPressed: onPressLike),
-          IconButton(
-              icon: Icon(Icons.cancel, color: Colors.red), onPressed: () {}),
         ],
       ),
     );

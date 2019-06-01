@@ -66,12 +66,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Flexible(
+            Expanded(
               child: PollCardWidget(),
               flex: 1,
             ),
-            Flexible(
+            Expanded(
               child: Column(
                 children: <Widget>[
                   Actions(),
