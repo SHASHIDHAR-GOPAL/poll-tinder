@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'poll_card_widget.dart';
 import 'actions_widget.dart';
+import 'description_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -46,6 +47,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final String placeHolderDescription =
+      'Tinder is a location-based social search mobile app, most often used as a dating site, that allows users to like (swipe right) or dislike (swipe left) other users, and allows users to chat if both parties like each other (a "match").[3][4][5] Information available to users is based on pictures, a short bio, and optionally, a linked Instagram or Spotify account.[6]Originally developed by Hatch Labs, the IAC incubator launched in 2011[7], the app was launched in 2012. By 2014, it was registering about one billion "swipes" per day.[8] Tinder is among the first "swiping apps", whose users employ a swiping motion to choose photos of other users, swiping right for potentially good matches and swiping left on a photo to move to the next one.';
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -71,8 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 children: <Widget>[
                   Actions(),
+                  Description(placeHolderDescription)
                 ],
               ),
+              flex: 1,
             )
           ],
         ),
